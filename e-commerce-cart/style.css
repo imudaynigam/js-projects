@@ -1,0 +1,226 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --danger-color: #dc3545;
+    --danger-hover-color: #c82333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- Main Container --- */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+/* --- Typography --- */
+h1, h2 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* --- Product List (Vertical List) --- */
+/* --- MODIFIED SECTION START --- */
+#product-list {
+    display: flex;
+    flex-direction: column; /* This forces a single vertical column */
+    gap: 20px; /* This sets the space between list items */
+}
+
+/* This is a placeholder style for product cards you would add with JavaScript */
+.product-card {
+    display: flex; /* Aligns items (image, text) horizontally */
+    align-items: center; /* Vertically centers the content */
+    gap: 25px; /* Space between image and details */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* --- MODIFIED SECTION END --- */
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+/* --- MODIFIED SECTION START --- */
+.product-card img {
+    max-width: 150px; /* A fixed width looks better in a list */
+    height: auto;
+    border-radius: 4px;
+    flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px; /* Reduced margin for tighter look */
+}
+
+.product-card p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+/* --- MODIFIED SECTION END --- */
+
+/* --- Shopping Cart --- */
+#cart-items {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fdfdfd;
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    min-height: 80px;
+}
+
+#empty-cart {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* This is a placeholder style for cart items you would add with JavaScript */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item span {
+    flex: 1;
+}
+
+.cart-item span:nth-child(2) {
+    text-align: right;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+/* --- Cart Total & Checkout --- */
+#cart-total {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-total p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+#total-price {
+    color: var(--primary-color);
+}
+
+/* --- Buttons --- */
+button {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Generic Add to Cart button style */
+.add-to-cart-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--primary-hover-color);
+}
+
+/* Generic Remove from Cart button style */
+.remove-from-cart-btn {
+    background-color: var(--danger-color);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+.remove-from-cart-btn:hover {
+    background-color: var(--danger-hover-color);
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#checkout-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+}
+
+#checkout-btn:hover {
+    background-color: #218838;
+}
